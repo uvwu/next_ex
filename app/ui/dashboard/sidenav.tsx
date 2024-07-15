@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
 import Link from 'next/link';
-import NavLinks from '@/app/ui/dashboard/nav-links';
+const NavLinks = dynamic(() => import('@/app/ui/dashboard/nav-links'), { ssr: false});
 import AcmeLogo from '@/app/ui/acme-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
 
